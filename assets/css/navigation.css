@@ -1,0 +1,253 @@
+.site-nav { position: sticky; top: 0; z-index: 1000; background: #f9f9f9; box-shadow: 0 1px 4px #0002; }
+.site-nav .nav-inner { max-width: 1500px; margin: auto; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: .15rem .8rem; padding: .45rem 1rem; }
+.site-nav .brand img { width: auto; height: 46px; display: block; }
+.site-nav a, .site-nav summary { border: 0; color: #222; text-decoration: none; cursor: pointer; font-size: 1rem; font-weight: 400; }
+.site-nav a:hover, .site-nav summary:hover { color: #0062a3; }
+.site-nav a:focus-visible, .site-nav summary:focus-visible { outline: 2px solid #0062a3; outline-offset: 3px; }
+.site-nav ul { list-style: none; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .4rem 1.2rem; margin: 0; padding: 0; }
+.site-nav li { padding: 0; }
+.site-nav details { position: relative; }
+.site-nav details ul { position: absolute; top: 100%; left: 0; min-width: 12rem; max-height: 70vh; overflow: auto; display: block; padding: .5rem; background: #f9f9f9; box-shadow: 0 4px 12px #0003; }
+.site-nav details li a { display: block; padding: .45rem .6rem; }
+.site-nav details li a:hover { background: #e7f2fa; }
+.site-nav summary::marker { color: #777; }
+[id] { scroll-margin-top: 9rem; }
+.survey-chart { margin: 2rem auto; max-width: 52rem; }
+.survey-chart dl { margin: 0; }
+.survey-chart .survey-row { display: grid; grid-template-columns: minmax(6rem, 10rem) 1fr; gap: .7rem; align-items: center; margin: .5rem 0; }
+.survey-chart dt, .survey-chart dd { margin: 0; }
+.survey-chart .bar { display: block; background: #2378a7; color: white; min-width: 3rem; padding: .2rem .5rem; }
+@media (max-width: 700px) { .site-nav .nav-inner { gap: .5rem; } .site-nav .brand img { height: 36px; } .site-nav ul { gap: .35rem .8rem; } .site-nav a, .site-nav summary { font-size: .875rem; } .site-nav details ul { right: 0; left: auto; } [id] { scroll-margin-top: 12rem; } }
+
+/* Make the separation between the main sections visible on every page. */
+#wrapper.divided > section + section {
+  border-top: 1px solid #c8c8c8;
+  box-shadow: none;
+}
+
+.solution-image { display: block; width: 100%; max-width: 12rem; height: 9rem; object-fit: contain; margin: 0 auto 1rem; }
+
+
+.site-nav .menu-button { min-height: 44px; padding: .4rem .75rem; border: 1px solid #777; border-radius: .25rem; color: #222; background: #fff; font: inherit; cursor: pointer; box-shadow: none; line-height: 1.2; }
+.site-nav .menu-button[hidden], .site-nav .nav-links[hidden] { display: none; }
+.site-nav .menu-button:focus-visible { outline: 2px solid #0062a3; outline-offset: 3px; }
+@media (max-width: 800px) {
+  html { font-size: 112.5%; }
+  .site-nav .nav-inner { justify-content: space-between; flex-wrap: wrap; gap: .5rem; }
+  .site-nav .brand img { height: 38px; }
+  .site-nav .menu-button { margin-left: auto; }
+  .site-nav .nav-links { flex-basis: 100%; display: flex; flex-direction: column; align-items: stretch; gap: 0; max-height: calc(100vh - 5rem); overflow-y: auto; }
+  .site-nav .nav-links li { width: 100%; }
+  .site-nav .nav-links a { display: block; padding: .7rem .3rem; font-size: 1rem; }
+  .site-nav summary { font-size: 1rem; padding: .5rem 0; }
+  .site-nav details ul { left: auto; right: 0; max-height: 60vh; }
+  .site-nav details ul a { font-size: 1rem; padding: .65rem; }
+  #wrapper { overflow-wrap: anywhere; }
+  #wrapper img { max-width: 100%; }
+  #wrapper iframe { max-width: 100%; aspect-ratio: 16 / 9; height: auto; }
+  #wrapper .survey-chart .survey-row { grid-template-columns: minmax(5.5rem, 8rem) 1fr; }
+  [id] { scroll-margin-top: 5rem; }
+}
+
+.news-photos img { display: block; max-width: 100%; width: 100%; height: auto; object-fit: contain; }
+@media (max-width: 736px) {
+  .news-photos { display: flex; gap: 1rem; align-items: flex-start; }
+  .news-photos img { flex: 1 1 0; min-width: 0; width: calc((100% - 1rem) / 2); }
+  .news-photos br { display: none; }
+}
+
+/* Keep the investment image behind the entire section at any screen height. */
+.public-investment.spotlight.style4 > .content { background-color: #fff; }
+.public-investment > .image { position: absolute; inset: 0; width: auto; height: auto; }
+.public-investment > .image img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; max-width: none; object-fit: cover; }
+
+/* Keep the language list inside the viewport on narrow screens. */
+@media (max-width: 800px) {
+  .site-nav details { position: static; }
+  .site-nav details ul { position: absolute; top: 100%; left: .5rem; right: .5rem; width: auto; min-width: 0; max-height: min(60vh, 28rem); z-index: 1001; }
+}
+
+#companies { padding-top: 0; }
+[data-section="surveys"] .inner > p, [data-section="surveys"] .survey-chart p, [data-section="surveys"] .recent-surveys p { font-size: .9rem; line-height: 1.6; }
+
+.survey-bar-link { display: block; border: 0; text-decoration: none; }
+.survey-bar-link:hover .bar, .survey-bar-link:focus-visible .bar { background: #145a80; }
+.survey-bar-link:focus-visible { outline: 2px solid #0062a3; outline-offset: 2px; }
+
+.survey-chart h4 { margin: 0 0 .6rem; }
+.survey-chart h4 a { color: inherit; text-decoration: underline; text-underline-offset: .15em; }
+.survey-dialog { box-sizing: border-box; width: min(38rem, calc(100% - 2rem)); max-height: min(80vh, 45rem); padding: 1.5rem; border: 0; border-radius: .5rem; color: #222; background: #fff; box-shadow: 0 1rem 4rem #0005; overflow-y: auto; }
+.survey-dialog::backdrop { background: rgba(0, 0, 0, .6); }
+.survey-dialog-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; }
+.survey-dialog-header h3 { margin: 0 0 1rem; }
+.survey-dialog .survey-close { display: grid; place-items: center; flex: none; width: 44px; height: 44px; padding: 0; letter-spacing: 0; text-indent: 0; border: 1px solid #777; border-radius: .25rem; background: #fff; color: #222; box-shadow: none; font-size: 2rem; line-height: 1; cursor: pointer; }
+.survey-dialog .survey-close:focus-visible { outline: 2px solid #0062a3; outline-offset: 3px; }
+.survey-dialog-content { line-height: 1.65; overflow-wrap: anywhere; }
+
+.science-section { border-top: 1px solid #c8c8c8; padding: 2.5rem 1.5rem 0; }
+
+/* Keep headings consistent throughout the site. */
+#wrapper :is(h1, h2, h3, h4, h5, h6),
+body > main :is(h1, h2, h3, h4, h5, h6) {
+  font-size: 1.75rem;
+  font-weight: 300;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+#wrapper :is(h1, h2, h3, h4, h5, h6) strong,
+body > main :is(h1, h2, h3, h4, h5, h6) strong { font-weight: inherit; }
+@media (max-width: 800px) {
+  #wrapper :is(h1, h2, h3, h4, h5, h6),
+  body > main :is(h1, h2, h3, h4, h5, h6) { font-size: 1.5rem; }
+}
+
+/* Survey titles keep their original mixed-case, compact typography. */
+#wrapper .survey-chart h4 { font-size: 1.1rem; font-weight: 300; line-height: 1.375; text-transform: none; }
+#wrapper .survey-dialog h3 { font-size: 1.5rem; font-weight: 300; line-height: 1.375; text-transform: none; }
+
+/* Keep subheadings visually distinct from main section titles. */
+#wrapper :is(h3, h4, h5, h6) { font-weight: 300; line-height: 1.375; text-transform: none; }
+#wrapper h3 { font-size: 1.35rem; }
+#wrapper h4 { font-size: 1.1rem; }
+#wrapper h5 { font-size: 1rem; }
+#wrapper h6 { font-size: .9rem; }
+@media (max-width: 800px) {
+  #wrapper h3 { font-size: 1.25rem; }
+  #wrapper h4 { font-size: 1.1rem; }
+}
+body > main h2 { font-size: 1.5rem; font-weight: 300; line-height: 1.375; text-transform: none; }
+#wrapper .survey-chart h4 { font-size: 1.1rem; font-weight: 300; line-height: 1.375; text-transform: none; }
+#wrapper .survey-dialog h3 { font-size: 1.5rem; font-weight: 300; line-height: 1.375; text-transform: none; }
+
+/* Restore the typography of the second domestication quotation. */
+#wrapper [data-section="second-domestication"] h2 { font-size: 2.25rem; font-weight: 300; line-height: 1.375; text-transform: none; }
+#wrapper [data-section="second-domestication"] h3 { font-size: 1.5rem; font-weight: 300; line-height: 1.375; text-transform: none; }
+
+.survey-chart .bar, .survey-chart .bar strong { color: #fff; }
+
+#wrapper [data-section="news"] h4 strong { font-weight: 700; }
+
+.survey-chart h4 a::after {
+  content: "+";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25em;
+  height: 1.25em;
+  margin-inline-start: .45em;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: .8em;
+  line-height: 1;
+  vertical-align: .08em;
+}
+
+/* Make emphasized body text visibly distinct from the light body font. */
+#wrapper p strong,
+#wrapper li strong,
+#wrapper .survey-dialog-content strong { font-weight: 700; }
+
+/* Align the survey heading below the sticky navigation. */
+#surveys { scroll-margin-top: 5rem; }
+
+/* Keep every percentage on one line and all bars the same height. */
+.survey-chart .bar {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: 2.25rem;
+  min-width: max-content;
+  white-space: nowrap;
+  overflow-wrap: normal;
+}
+@media (max-width: 800px) {
+  #wrapper [data-section="surveys"] > .inner { padding-left: 1rem; padding-right: 1rem; }
+  #wrapper .survey-chart .survey-row { grid-template-columns: minmax(4.5rem, 6rem) minmax(0, 1fr); gap: .5rem; }
+}
+
+/* Investment chart: labels stay readable even for small values. */
+#investment { scroll-margin-top: 6rem; }
+.investment-chart { margin: 2rem 0 3rem; }
+.investment-chart figcaption p, .investment-sources { font-size: .85em; }
+.investment-year { display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: .75rem; margin: 1.3rem 0; }
+.investment-year-label { font-weight: 600; }
+.investment-bars { display: grid; gap: .45rem; }
+.investment-bar { position: relative; min-height: 2.3rem; display: flex; align-items: center; padding: .35rem .65rem; isolation: isolate; }
+.investment-bar::before { content: ''; position: absolute; inset: 0 auto 0 0; width: var(--bar-width); min-width: 4px; z-index: -1; border-radius: 3px; }
+.investment-pf::before { background: #b9e1d5; }
+.investment-cm::before { background: #f6d7a6; }
+.investment-bar span { color: #222; font-weight: 600; line-height: 1.3; }
+@media (max-width: 736px) { .investment-year { grid-template-columns: 1fr; gap: .3rem; } .investment-bar { min-height: 2.5rem; } }
+
+/* Blue-to-green navigation with readable controls at every size. */
+.site-nav { background: linear-gradient(110deg, #eef5f8 0%, #f2f0f7 100%); box-shadow: 0 3px 14px rgba(12, 61, 76, .22); }
+.site-nav .nav-inner { gap: .35rem 1rem; padding-top: .5rem; padding-bottom: .5rem; }
+.site-nav .brand { display: inline-flex; align-items: center; padding: .2rem .55rem; border-radius: .6rem; background: #fff; }
+.site-nav .brand img { height: 42px; }
+.site-nav .nav-links a, .site-nav summary { color: #253b4c; border-radius: .4rem; text-shadow: 0 1px 10px rgba(255, 255, 255, .85); }
+.site-nav .nav-links a { display: inline-block; padding: .35rem .3rem; }
+.site-nav .nav-links a:hover, .site-nav summary:hover { color: #12384c; background: rgba(32, 82, 105, .09); }
+.site-nav summary { padding: .35rem .5rem; }
+.site-nav summary::marker { color: #253b4c; }
+.site-nav .nav-links a:focus-visible, .site-nav summary:focus-visible, .site-nav .menu-button:focus-visible { outline-color: #075565; }
+.site-nav details ul { border-radius: .55rem; background: #fff; box-shadow: 0 10px 30px rgba(0, 40, 50, .25); }
+.site-nav details ul a { color: #173c48; border-radius: .35rem; }
+.site-nav details ul a:hover { color: #073e48; background: #e7f5f1; }
+.site-nav details ul a:focus-visible { outline-color: #006b73; }
+.site-nav .menu-button { color: #253b4c; background: rgba(255, 255, 255, .65); border: 1px solid rgba(37, 59, 76, .5); border-radius: .45rem; text-shadow: 0 1px 10px rgba(255, 255, 255, .85); }
+.site-nav .menu-button:hover { background: #fff; }
+@media (max-width: 800px) {
+  .site-nav .brand img { height: 34px; }
+  .site-nav .nav-links a { display: block; padding: .7rem .6rem; }
+}
+
+#contact { border-top: 1px solid #c8c8c8; }
+
+/* Compact navigation while retaining comfortable mobile controls. */
+.site-nav .nav-inner { padding-top: .25rem; padding-bottom: .25rem; gap: .2rem .8rem; }
+.site-nav .brand { padding: .15rem .4rem; }
+.site-nav .brand img { height: 34px; }
+.site-nav .nav-links a, .site-nav summary { font-size: .88rem; }
+@media (max-width: 800px) {
+  .site-nav .brand img { height: 30px; }
+  .site-nav .nav-links a { font-size: .9rem; }
+  .site-nav .menu-button { font-size: .9rem; }
+}
+
+/* A more compact introduction. */
+.banner .content h1 { font-size: 2.6rem; }
+.banner .content p.major { font-size: 1.1rem; }
+@media (max-width: 800px) { .banner .content h1 { font-size: 2.1rem; } .banner .content p.major { font-size: 1.05rem; } }
+
+.banner .content p.language-links { font-size: .9rem; line-height: 1.6; }
+
+/* Keep the desktop introduction close to the navigation. */
+@media (min-width: 801px) and (orientation: landscape) { .banner.style3.fullscreen { min-height: 0; padding-top: 2.5rem; padding-bottom: 1.5rem; } }
+
+.article-links { list-style: none; padding: 0; }
+.article-links li { display: flex; align-items: center; gap: .9rem; margin: .85rem 0; padding: 0; }
+.article-links img { display: block; flex: 0 0 4rem; width: 4rem; height: 3rem; object-fit: cover; border-radius: .35rem; }
+.article-links a { overflow-wrap: anywhere; }
+
+.gfi-reports { margin: 3rem 0 1rem; border-top: 1px solid #c8c8c8; padding-top: 2rem; }
+.gfi-report-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.gfi-report-card { border: 1px solid #d9e4e3; background: #f8fbfa; border-radius: .45rem; padding: 1.15rem; }
+.gfi-report-card h4 { margin: 0 0 .65rem; }
+.gfi-report-card p { margin: 0; }
+.gfi-reports .gfi-webinars { margin: 1.5rem 0 0; }
+@media (max-width: 736px) { .gfi-report-grid { grid-template-columns: 1fr; } }
+
+
+.article-links .article-more { margin-top: 1.8rem; }
+
+/* Consistent product cards and a compact location list. */
+.gallery.style1 article > img { display: block; width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.product-locations { font-size: .9rem; margin-top: 2rem; }
+#wrapper .product-locations h3 { font-size: 1.2rem; }
+
+/* Investment calls to action */
+.investment-cta { height: auto; min-height: 2.75rem; line-height: 1.4; padding: .7rem 1.3rem; white-space: normal; }
+.investment-cta-actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+.investment-call-to-action { margin-top: 2rem; }
+
+.companies-button { margin-top: 1.5rem; }

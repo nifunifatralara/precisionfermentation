@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://precisionfermentationfood.com/sitemap.xml
+Sitemap: https://fermentaciondeprecision.com/sitemap-es.xml
